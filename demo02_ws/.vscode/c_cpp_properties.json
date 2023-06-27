@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/yin/catkin_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/yin/demo01_ws/src/helloworld/include/**",
+        "/home/yin/test01_ws/src/helloworld01/include/**",
+        "/home/yin/catkin_ws/src/mbot_bringup/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++17"
+    }
+  ],
+  "version": 4
+}

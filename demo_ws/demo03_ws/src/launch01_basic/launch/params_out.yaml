@@ -1,0 +1,15 @@
+bg_B: 255
+bg_G: 50
+bg_R: 100
+my_turtle: {background_b: 255, background_g: 86, background_r: 69, bg_B: 255, bg_G: 50,
+  bg_R: 100, param_B: 3.14}
+param_A: 100
+rosdistro: 'melodic
+
+  '
+roslaunch:
+  uris: {host_yin_virtualbox__40995: 'http://yin-VirtualBox:40995/', host_yin_virtualbox__46583: 'http://yin-VirtualBox:46583/'}
+rosversion: '1.14.13
+
+  '
+run_id: e3492430-09b7-11ee-9994-0800276ad629
