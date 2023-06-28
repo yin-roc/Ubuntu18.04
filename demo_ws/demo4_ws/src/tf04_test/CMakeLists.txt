@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(tf03_tfs)
+project(tf04_test)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   tf2
   tf2_geometry_msgs
   tf2_ros
+  turtlesim
 )
 
 ## System dependencies are found with CMake's conventions
@@ -108,8 +109,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES tf03_tfs
-#  CATKIN_DEPENDS geometry_msgs roscpp rospy std_msgs tf2 tf2_geometry_msgs tf2_ros
+#  LIBRARIES tf04_test
+#  CATKIN_DEPENDS geometry_msgs roscpp rospy std_msgs tf2 tf2_geometry_msgs tf2_ros turtlesim
 #  DEPENDS system_lib
 )
 
@@ -126,7 +127,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/tf03_tfs.cpp
+#   src/${PROJECT_NAME}/tf04_test.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -137,8 +138,10 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/tf03_tfs_node.cpp)
-add_executable(demo01_tfs src/demo01_tfs.cpp)
+# add_executable(${PROJECT_NAME}_node src/tf04_test_node.cpp)
+add_executable(test01_new_turtle src/test01_new_turtle.cpp)
+add_executable(test02_pub_turtle src/test02_pub_turtle.cpp)
+add_executable(test03_control_turtle2 src/test03_control_turtle2.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -149,13 +152,22 @@ add_executable(demo01_tfs src/demo01_tfs.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(demo01_tfs ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(test01_new_turtle ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(test02_pub_turtle ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(test03_control_turtle2 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
-target_link_libraries(demo01_tfs
+target_link_libraries(test01_new_turtle
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(test02_pub_turtle
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(test03_control_turtle2
   ${catkin_LIBRARIES}
 )
 
@@ -206,7 +218,7 @@ target_link_libraries(demo01_tfs
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_tf03_tfs.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_tf04_test.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
