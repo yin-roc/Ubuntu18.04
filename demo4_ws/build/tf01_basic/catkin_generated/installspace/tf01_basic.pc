@@ -1,0 +1,8 @@
+prefix=/home/yin/demo_ws/demo4_ws/install
+
+Name: tf01_basic
+Description: Description of tf01_basic
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

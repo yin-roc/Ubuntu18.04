@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "${default}",
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "includePath": [
+                "/home/yin/test01_ws/devel/include/**",
+                "/home/yin/catkin_ws/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/home/yin/demo02_ws/src/hello_vscode/include/**",
+                "/home/yin/demo01_ws/src/helloworld/include/**",
+                "/home/yin/catkin_ws/src/mbot_bringup/include/**",
+                "/home/yin/test01_ws/src/plumbing_param_server/include/**",
+                "/home/yin/test01_ws/src/plumbing_pub_sub/include/**",
+                "/home/yin/test01_ws/src/plumbing_server_client/include/**",
+                "/home/yin/test01_ws/src/plumbing_test/include/**",
+                "/usr/include/**",
+                "/opt/ros/melodic/include",
+                "/home/yin/demo_ws/demo4_ws/src/tf01_basic/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
