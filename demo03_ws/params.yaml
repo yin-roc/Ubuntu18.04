@@ -1,0 +1,12 @@
+length: 0.5
+rosdistro: 'melodic
+
+  '
+roslaunch:
+  uris: {host_yin_virtualbox__37511: 'http://yin-VirtualBox:37511/'}
+rosversion: '1.14.13
+
+  '
+run_id: e65f9ecc-fde8-11ed-8ab6-0800276ad629
+turtlesim: {background_b: 255, background_g: 86, background_r: 69}
+width: 0.4
