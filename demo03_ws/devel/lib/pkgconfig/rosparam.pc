@@ -1,0 +1,8 @@
+prefix=/home/yin/demo_ws/demo03_ws/devel
+
+Name: rosparam
+Description: Description of rosparam
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
