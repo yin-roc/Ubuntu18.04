@@ -1,0 +1,52 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import rospy
+# from plumbing_server_client.srv import AddInts, AddIntsRequest, AddIntsResponse
+#或者上一行可替换为：
+from plumbing_server_client.srv import *
+
+"""
+    服务器：解析客户请求，产生响应。
+        1、导包
+        2、初始化ros节点
+        3、创建服务端对象
+        4、编写处理逻辑(回调函数)
+        5、spin()
+
+"""
+#参数:封装了请求数据
+#返回值:响应数据
+def doNum(request):
+    # 1.解析提交的两个整数
+    num1 = request.num1
+    num2 = request.num2
+    # 2.求和
+    sum = num1 + num2
+    # 3.将结果封装进响应
+    response = AddIntsResponse()
+    response.sum = sum
+
+    rospy.loginfo("服务器解析了数据: num1 = %d, num2 = %d, 相应的结果: sum = %d", num1, num2, sum)
+
+    return response
+    pass
+
+
+if __name__ == "__main__":
+
+    # 2、初始化ros节点
+    rospy.init_node("heiShui")
+    # 3、创建服务端对象
+    server = rospy.Service("addInts", AddInts, doNum)
+    #(name: Any, service_class: Any, handler: Any, buff_size: int = DEFAULT_BUFF_SIZE, error_handler: Any | None = None) -> None
+    # name:共同的话题,也就是topic
+    # service_class:用户自定义的消息类型,直接写功能包里面的文件名:AddInts
+    # handler:回调函数
+    rospy.loginfo("服务器已经启动了")
+
+    # 4、编写处理逻辑(回调函数)
+    # 5、spin()
+    rospy.spin()
+
+    pass
